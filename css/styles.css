@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(120deg, rgb(65, 59, 59), rgb(71, 71, 242), rgb(237, 82, 159));
+    background-size: 400%; 
+    animation: bg-animation 5s infinite alternate;
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 100vh;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+header {
+    font-size: 1.5rem;
+}
+
+header, form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button {
+    color: blueviolet;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover {
+    background: black;
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, .complete-btn {
+    background: rgb(174, 15, 15);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.complete-btn {
+    background: rgb(69, 201, 43);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
