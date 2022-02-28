@@ -66,9 +66,8 @@ function deleteCheck(e) {
         toLocal();
         todo.addEventListener("transitionend", function() {
             todo.remove();
-            toLocal();
         });
-        
+        toLocal();
     }
     
     if(item.classList[0]=== 'complete-btn') {
