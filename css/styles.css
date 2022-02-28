@@ -74,6 +74,7 @@ form {
  
 }
 form input, form button {
+    color: rgb(90, 90, 90);
     padding: 0.5rem;
     font-size: 2rem;
     border: none;
@@ -98,8 +99,8 @@ form button {
     transition: all 0.3s ease;
 }
 form button:hover {
-    background: black;
-    color: white;
+    background: rgb(54, 6, 99);
+    color: rgb(255, 255, 255);
 }
 
 .todo-container {
@@ -118,7 +119,7 @@ form button:hover {
 .todo {
     margin: 0.3rem;
     background: white;
-    color: black;
+    color: rgb(90, 89, 89);
     font-size: 1rem;
     display: flex;
     justify-content: space-between;
@@ -131,7 +132,7 @@ form button:hover {
 }
 
 .trash-btn, .complete-btn {
-    background: rgb(174, 15, 15);
+    background: rgb(225, 60, 60);
     color: white;
     border: none;
     padding: .5rem;
@@ -139,7 +140,7 @@ form button:hover {
     font-size: 1rem;
 }
 .complete-btn {
-    background: rgb(69, 201, 43);
+    background: rgb(105, 226, 81);
 }
 
 .todo-item {
@@ -175,14 +176,13 @@ select {
     appearance: none;
     outline: none;
     border: none;
-    color: black;
+    color: rgb(97, 96, 96);
     width: 10rem;
     cursor: pointer;
     padding: 1rem;
     height: 50px;
     font-family: 'Poppins', sans-serif;
-   
-    
+    background-color: white;
 }
 .select {
     display: flex;
@@ -191,12 +191,13 @@ select {
     position: relative;
     overflow: hidden;
    
+   
 }
 
 .select::after {
     content: "\25BC";
     position: absolute;
-    background: black;
+    background: rgb(54, 6, 99);
     top: 0;
     right: 0;
     padding: 1rem;
@@ -205,8 +206,8 @@ select {
 }
 
 .select:hover::after {
-    background: white;
-    color: black;
+    background: rgb(221, 217, 217);
+    color:  blueviolet;
 }
 
 @media (min-width:500px) {
