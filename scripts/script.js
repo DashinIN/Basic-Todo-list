@@ -18,7 +18,13 @@ function addTodo(event) {
     todoDiv.classList.add("todo");
 
     const newTodo = document.createElement("li");
+    
+    if(todoInput.value.trim() !== "") {
     newTodo.innerText = todoInput.value;
+    } else {
+        return
+    }
+    
     newTodo.classList.add('todo-item');
     todoDiv.appendChild(newTodo);
 
@@ -58,19 +64,28 @@ function deleteCheck(e) {
 
 function fitlerTodo(e) {
     const todos = todoList.childNodes;
+    console.log(todos);
     todos.forEach(function(todo) {
         switch(e.target.value) {
             case "all":
                 todo.style.display = "flex";
-                console.log(lelel);
                 break;
             case "completed":
                 if(todo.classList.contains("completed")) {
                     todo.style.display = "flex";
                 } else {
                     todo.style.display = "none";
-                    console.log(looolel);
+                   
                 }
+                break;
+            case "uncompleted":
+                if(!todo.classList.contains("completed")) {
+                    todo.style.display = "flex";
+                } else {
+                    todo.style.display = "none";
+                   
+                }
+                break;
         }
     });
-}
+} 
