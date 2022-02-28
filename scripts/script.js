@@ -14,14 +14,16 @@ todosLocal = todoList.innerHTML; // получаем html блока с пунк
 localStorage.setItem('todosLocal', todosLocal); // элементу 'todosLocal' хранилища присваивают html код.
 }
 
+
+
 function addTodo(event) {
-   
+    console.log("hello");
     event.preventDefault();
 
     const todoDiv = document.createElement("div");
-    
     todoDiv.classList.add("todo");
     toLocal();
+
     const newTodo = document.createElement("li");
     
     if(todoInput.value.trim() !== "") {
@@ -62,7 +64,7 @@ function addTodo(event) {
 function deleteCheck(e) {
     const item = e.target;
 
-    if(item.classList[0] === 'trash-btn') {
+    if(item.classList[0]=== 'trash-btn') {
         const todo = item.parentElement;
         todo.classList.add("fall");
         todo.addEventListener("transitionend", function() {
@@ -82,6 +84,7 @@ function deleteCheck(e) {
 
 function fitlerTodo(e) {
     const todos = todoList.childNodes;
+    console.log(todos);
     todos.forEach(function(todo) {
         switch(e.target.value) {
             case "all":
@@ -115,3 +118,4 @@ function fitlerTodo(e) {
 if(localStorage.getItem('todosLocal')) {
     todoList.innerHTML = localStorage.getItem('todosLocal');
     }
+    
