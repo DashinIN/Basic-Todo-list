@@ -118,4 +118,3 @@ function fitlerTodo(e) {
 if(localStorage.getItem('todosLocal')) {
     todoList.innerHTML = localStorage.getItem('todosLocal');
     }
-    

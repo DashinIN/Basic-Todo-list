@@ -124,8 +124,7 @@ form button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-   
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     
 }
 .todo li {
@@ -210,6 +209,4 @@ select {
     background: rgb(221, 217, 217);
     color:  blueviolet;
 }
-
-
 
