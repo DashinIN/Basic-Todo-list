@@ -129,29 +129,29 @@ function fitlerTodo(e) {
         for (let button of buttons) {
             if (button != item) {
                  button.classList.remove("active");
-                 toLocal();
+    
             }
         }
         item.classList.toggle("active");
-        toLocal();
+     
         
         switch (item.classList[1]) {
             case 'item-winter':
                 bodyBlock.className = 'winter';
-                toLocal();
+                
                 break;
             case 'item-spring':
                 bodyBlock.className = 'spring';
-                toLocal();
+               
                 break;
             case 'item-summer':
                 bodyBlock.className = 'summer';
-                toLocal();
+               
                 break;
 
             case 'item-autumn':
                 bodyBlock.className = 'autumn';
-                toLocal();
+                
                 break;
             default:
                
@@ -159,7 +159,7 @@ function fitlerTodo(e) {
           
           if(!item.classList.contains('active')) {
             bodyBlock.className = 'classic';
-            toLocal();
+            
           }
         
         
