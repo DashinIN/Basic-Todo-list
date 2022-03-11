@@ -33,15 +33,57 @@ body {
     }
 }
 header {
-    margin: 10vh 0 5vh 0;
+    margin: 3vh 0 5vh 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+  
+}
+
+header h1 {
+    justify-self: center;
+    align-self: center;
     font-size: 1rem;
 }
 
+.header__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-left: 20px;
+}
 
+.header__menu-item {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    
+   
+}
 
+.active {
+    border: 2px solid black;
+}
+.winter  {
+    background-image:url('https://dashinin.github.io/Basic-Todo-list/img/snowflake.png'), url('https://dashinin.github.io/Basic-Todo-list/img/snowflake3.png'), 
+    url('https://dashinin.github.io/Basic-Todo-list/img/snowflake2.png'), linear-gradient(15deg, cornflowerblue, 70%, rgb(4, 18, 44));
+    animation: snow  20s linear infinite;
+}
+
+@keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px;}
+    100% {background-position: 500px 1000px, 400px 400px, 300px 300px, 0px 0px;}
+   } 
+
+.summer {
+    background-image: linear-gradient(120deg, rgb(130, 79, 32),rgb(241, 241, 253),rgb(30, 242, 48));
+}
+.summer {
+    background-image: linear-gradient(120deg, rgb(242, 255, 0),rgb(12, 12, 243),rgb(253, 5, 204));
+}
+.autumn {
+    background-image: linear-gradient(120deg, rgb(242, 228, 31),rgb(248, 108, 14),rgb(235, 42, 17));
+}
 
 form {
     display: flex;
@@ -51,21 +93,22 @@ form {
    padding: 1rem;
   
 }
+@media (min-width:440px) {
+    header h1{
+        font-size: 1.5rem;
+    }
+}
+
 
 @media (min-width:740px) {
-    header {
-        font-size: 1.5rem;
+    header h1{
+        font-size: 4em;
     }
     form {
         flex-direction: row;
     }
 }
 
-@media (min-width:440px) {
-    header {
-        font-size: 1.5rem;
-    }
-}
 
 .todo-window {
     display: flex;
