@@ -129,6 +129,7 @@ function fitlerTodo(e) {
         for (let button of buttons) {
             if (button != item) {
                  button.classList.remove("active");
+                 
     
             }
         }
@@ -166,3 +167,9 @@ function fitlerTodo(e) {
        
         
     }
+
+
+
+    if(localStorage.getItem('todosLocal')) {
+        todoList.innerHTML = localStorage.getItem('todosLocal');
+        }
