@@ -44,28 +44,38 @@ header {
 header h1 {
     justify-self: center;
     align-self: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .header__menu {
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    margin-left: 20px;
+    justify-content: flex-end;
+    margin: 0px 20px 20px 20px;
 }
 
 .header__menu-item {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     background-color: rgb(255, 255, 255);
-    border: none;
+    border: 1px solid rgb(237, 231, 231);
     transition: background-color .3s ease;
-    
-   
 }
 
-.active {
-    border: 2px solid rgb(109, 104, 104);
+@media (min-width:440px) {
+
+    .header__menu {
+        justify-content: flex-start;
+    }
+    .header__menu-item {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+.header__menu-item.active {
+    border: 1px solid rgb(109, 104, 104);
 }
 .item-winter.active {
     background-color: #77cef7;
@@ -83,7 +93,7 @@ header h1 {
 .winter  {
     background-size: 200%; 
     background-image:url('https://dashinin.github.io/Basic-Todo-list/img/snowflake.png'), url('https://dashinin.github.io/Basic-Todo-list/img/snowflake3.png'), 
-    url('https://dashinin.github.io/Basic-Todo-list/img/snowflake2.png'), linear-gradient(15deg, cornflowerblue, 70%, rgb(4, 18, 44));
+    url('https://dashinin.github.io/Basic-Todo-list/img/snowflake2.png'), linear-gradient(15deg, rgb(64, 112, 201), 70%, rgb(4, 18, 44));
     animation: snow  20s linear infinite;
 }
 
@@ -93,7 +103,7 @@ header h1 {
    } 
 
 .spring {
-    background-image: linear-gradient(#53b4d5 0%, #9fd4e6 40%, #ebb184 60%, #f57297 70%, #ca65ca 80%, #5863c9 100%);
+    background-image: linear-gradient(#8ee4a4 0%, #9fe6a5 40%, #ebb184 60%, #f57297 70%, #ca65ca 80%, #5863c9 100%);
     
 }
 
@@ -104,8 +114,8 @@ header h1 {
     animation: bg-animation 5s infinite alternate;
 }
 .autumn {
-    background-image: linear-gradient(90deg, #d4a84f,#4d3825,#17120c);
-    animation: bg-animation 5s infinite alternate;
+    background-image: linear-gradient(90deg, #f2ac21,#e3ed30,#e1562c);
+    animation: bg-animation 10s infinite alternate;
 }
 
 form {
@@ -118,7 +128,7 @@ form {
 }
 @media (min-width:440px) {
     header h1{
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 }
 

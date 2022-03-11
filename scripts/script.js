@@ -115,9 +115,6 @@ function fitlerTodo(e) {
     });
 } 
 
-
-
-
  
   const buttons =  document.querySelectorAll('.header__menu-item');
   const buttonsArea = document.querySelector('.header__menu');
@@ -130,23 +127,31 @@ function fitlerTodo(e) {
     function itemToggle(e) {
         const item = e.target;
         for (let button of buttons) {
-            if (button != item) button.classList.remove("active");
+            if (button != item) {
+                 button.classList.remove("active");
+                 toLocal();
+            }
         }
         item.classList.toggle("active");
+        toLocal();
         
         switch (item.classList[1]) {
             case 'item-winter':
                 bodyBlock.className = 'winter';
+                toLocal();
                 break;
             case 'item-spring':
                 bodyBlock.className = 'spring';
+                toLocal();
                 break;
             case 'item-summer':
                 bodyBlock.className = 'summer';
+                toLocal();
                 break;
 
             case 'item-autumn':
                 bodyBlock.className = 'autumn';
+                toLocal();
                 break;
             default:
                
@@ -154,9 +159,10 @@ function fitlerTodo(e) {
           
           if(!item.classList.contains('active')) {
             bodyBlock.className = 'classic';
+            toLocal();
           }
         
         
        
-        console.log(item.classList[2]);
+        
     }
