@@ -169,7 +169,10 @@ if(localStorage.getItem('todosLocal')) {
             default:
                
           }
-       
+          
+          if(!item.classList.contains('active')) {
+            bodyBlock.className = 'classic';
+          }
         
         
        

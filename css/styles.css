@@ -16,12 +16,14 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: linear-gradient(120deg, rgb(65, 59, 59), rgb(71, 71, 242), rgb(237, 82, 159));
     background-size: 400%; 
-    animation: bg-animation 5s infinite alternate;
     background-repeat: no-repeat;
     color: white;
     min-height: 100vh;
+}
+body.classic {
+    background-image: linear-gradient(120deg, rgb(65, 59, 59), rgb(71, 71, 242), rgb(237, 82, 159));
+    animation: bg-animation 5s infinite alternate;
 }
 
 @keyframes bg-animation {
@@ -57,14 +59,29 @@ header h1 {
     height: 40px;
     background-color: rgb(255, 255, 255);
     border: none;
+    transition: background-color .3s ease;
     
    
 }
 
 .active {
-    border: 2px solid black;
+    border: 2px solid rgb(109, 104, 104);
 }
+.item-winter.active {
+    background-color: #77cef7;
+}
+.item-spring.active {
+    background-color: #95f3a5;
+}
+.item-summer.active {
+    background-color: #f80a66;
+}
+.item-autumn.active {
+    background-color: #e47616;
+}
+
 .winter  {
+    background-size: 200%; 
     background-image:url('https://dashinin.github.io/Basic-Todo-list/img/snowflake.png'), url('https://dashinin.github.io/Basic-Todo-list/img/snowflake3.png'), 
     url('https://dashinin.github.io/Basic-Todo-list/img/snowflake2.png'), linear-gradient(15deg, cornflowerblue, 70%, rgb(4, 18, 44));
     animation: snow  20s linear infinite;
@@ -75,14 +92,20 @@ header h1 {
     100% {background-position: 500px 1000px, 400px 400px, 300px 300px, 0px 0px;}
    } 
 
-.summer {
-    background-image: linear-gradient(120deg, rgb(130, 79, 32),rgb(241, 241, 253),rgb(30, 242, 48));
+.spring {
+    background-image: linear-gradient(#53b4d5 0%, #9fd4e6 40%, #ebb184 60%, #f57297 70%, #ca65ca 80%, #5863c9 100%);
+    
 }
+
+
+
 .summer {
-    background-image: linear-gradient(120deg, rgb(242, 255, 0),rgb(12, 12, 243),rgb(253, 5, 204));
+    background-image: linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706);
+    animation: bg-animation 5s infinite alternate;
 }
 .autumn {
-    background-image: linear-gradient(120deg, rgb(242, 228, 31),rgb(248, 108, 14),rgb(235, 42, 17));
+    background-image: linear-gradient(90deg, #d4a84f,#4d3825,#17120c);
+    animation: bg-animation 5s infinite alternate;
 }
 
 form {
