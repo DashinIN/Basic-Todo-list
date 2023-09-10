@@ -18,36 +18,76 @@
             </div>
             <h1>My to-do list</h1>
         </header>
-
-        <div class="fitlers__row">
-            <div class="select">
-                <select name="todos" class="filter-todo">
-                    <option value="all">all</option>
-                    <option value="completed">completed</option>
-                    <option value="uncompleted">uncompleted</option>
-                </select>
-            </div>
-        </div>
-
-        <form class="todo-form">
-            <div class="todo-window">
-                <div class="inputs">
-                    <input type="text" placeholder="todo-name" class="todo-input">
-                    <input type="date" class="todo-date">
-                    <input type="time" class="todo-time">
+        <main>
+            <div class="fitlers__row">
+                <div class="filter">
+                    <p>type filter</p>
+                    <div class="select">
+                        <select name="todos" class="filter-todo">
+                            <option value="all">all</option>
+                            <option value="completed">completed</option>
+                            <option value="uncompleted">uncompleted</option>
+                        </select>
+                    </div>
                 </div>
-                <input type="text" placeholder="todo-description" class="todo-description">
+                <div class="filter">
+                    <p>deadline filter</p>
+                    <div class="select">
+                        <select name="todos" class="filter-deadline">
+                            <option value="asc">asc</option>
+                            <option value="desc">desc</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter">
+                    <p>created filter</p>
+                    <div class="select">
+                        <select name="todos" class="filter-create">
+                            <option value="asc">asc</option>
+                            <option value="desc">desc</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <button type="submit" class="todo-button">
-                Add
-            </button>
-        </form>
 
-        <div class="todo-container">
-            <ul class="todo-list"></ul>
-        </div>
+            <form class="todo-form">
+                <div class="todo-window">
+                    <div class="inputs">
+                        <input type="text" placeholder="todo name" class="todo-input">
+                        <input type="datetime-local" class="todo-time">
+                    </div>
+                    <input type="text" placeholder="todo description" class="todo-description">
+                </div>
+                <button type="submit" class="todo-button">
+                    Add
+                </button>
+            </form>
 
-    <script src="js/script.js"></script>
+            <div class="todo-container">
+                <ul class="todo-list"></ul>
+            </div>
+
+            <div class="modal">
+                <div class="modal-content">
+                    <form class="edit__form">
+                        <div class="modal__header">
+                            <p>Edit todo</p>
+                            <button class="close">close</button>
+                        </div>
+                        <div class="form__row">
+                            <label for="editName">Todo name:</label>
+                            <input type="text" id="editName" name="name">
+                            <label for="editDescription">Description:</label>
+                            <input type="text" id="editDescription" name="description">
+                            <label for="editDeadline">Deadline:</label>
+                            <input type="datetime-local" id="editDeadline" name="deadline">
+                            <button type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    <script type="module" src="js/script.js"></script>
     <script src="./js/theme.js"></script>
 </body>
 </html>
