@@ -338,6 +338,13 @@ select {
     width: 100%;
     height: 100%;
     font-size: 1.4rem;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.modal-content input {
+    border: 1px solid black;
+    border-radius: 6px;
 }
 
 .modal__header {
@@ -352,7 +359,26 @@ select {
 
 .form__row {
     display: flex;
+    gap: 12px;
     flex-direction: column;
+}
+.close {
+    padding: 0;
+    border: none;
+    background: white;
+}
+.close:hover {
+    background: white;
+}
+
+.close img {
+    width: 20px;
+    height: 20px;
+}
+
+.form__row button {
+    padding: 10px;
+    color: black;
 }
 
 @media (min-width: 1024px) {
