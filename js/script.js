@@ -24,8 +24,12 @@ const globalTodos = JSON.parse(localStorage.getItem('todos')) || []
 let todoIdCounter = JSON.parse(localStorage.getItem('todoIdCounter')) || 1;
 if(globalTodos.length) renderTodoList(globalTodos)
 
-
-setInterval(checkDeadlines(globalTodos), 600); 
+Notification.requestPermission()
+.then(permission => {
+  if (permission === 'granted') {
+    setInterval(checkDeadlines(globalTodos), 60000);
+  }
+} )
 
 
 const modal = document.querySelector('.modal');

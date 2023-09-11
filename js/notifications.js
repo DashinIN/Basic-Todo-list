@@ -8,7 +8,6 @@ export const checkDeadlines = (globalTodos) => {
             const notificationOptions = {
                 body: `Task "${todo.name}" deadline is ${minutesDifference} min`,
             };
-            console.log('go')    
             const notification = new Notification("Task deadline", notificationOptions);
                     
         }
