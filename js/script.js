@@ -68,7 +68,6 @@ editForm.addEventListener("submit", (e) => {
     const editedDeadline = new Date(editDeadlineInput.value);
     // Находим ближайший элемент с классом "todo"
     const todoId = editForm.id;
-    console.log(todoId);
     // Находим задачу в массиве по ID
     const todoIndex = globalTodos.findIndex((todo) => todo.id === Number(todoId));
     if (todoIndex !== -1) {
@@ -195,10 +194,8 @@ function deleteCheck(e) {
 
     if(item.classList[0]=== 'edit-btn') {
         const todoDiv = item.closest(".todo");
-        console.log(todoDiv)
         const todoId = todoDiv.id;
         const todo = globalTodos.find((todo) => todo.id === Number(todoId));
-        console.log(todo)
         editForm.id = todo.id;
         editNameInput.value = todo.name;
         editDescriptionInput.value = todo.description;
