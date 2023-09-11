@@ -125,6 +125,16 @@ main {
     align-items: center;    
 }
 
+.header__menu {
+    margin: 12px 20px 0;
+}
+
+.header__menu-item {
+    cursor: pointer;
+}
+
+
+
 form {
     display: flex;
     flex-direction: column;
@@ -134,7 +144,10 @@ form {
 input {
     border: none;
     padding: 10px 0;
+    text-align: left;
 }
+
+
 .todo-input {
     flex-grow: 1;
 }
@@ -206,6 +219,19 @@ form button:hover {
     display: flex;
     flex-direction: column;
     flex-grow: 3;
+    max-width: 100%;
+    min-width: 30%;
+    overflow: hidden;
+}
+
+.todo__name {
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;  
+}
+
+.todo__deadline {
+    font-size: 0.8rem;
 }
 
 .buttons__area {
@@ -265,9 +291,9 @@ select {
     border: none;
     color: rgb(97, 96, 96);
     cursor: pointer;
-    height: 50px;
     width: 100%;
     background-color: white;
+    padding: 20px;
 }
 
 .select {
@@ -320,6 +346,10 @@ select {
     align-items: center;
 }
 
+.todo__content, .todo__deadline {
+    padding: 0 5px;
+}
+
 .form__row {
     display: flex;
     flex-direction: column;
@@ -334,5 +364,32 @@ select {
     .modal-content {
         width: 400px;
         height: auto;
+    }
+
+    .fitlers__row {
+        margin-top: 16px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .filter {
+        width: 100%;
+    }
+
+    input {
+        padding: 10px;
+    }
+
+    .todo-button {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+    .todo {
+        height: 70px;
     }
 }

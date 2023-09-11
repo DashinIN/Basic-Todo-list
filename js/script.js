@@ -1,4 +1,5 @@
 import { formatTime } from "./formatTime.js";
+import { checkDeadlines } from "./notifications.js";
 
 const todoForm = document.querySelector('.todo-form');
 const todoInput = document.querySelector('.todo-input');
@@ -24,12 +25,17 @@ let todoIdCounter = JSON.parse(localStorage.getItem('todoIdCounter')) || 1;
 if(globalTodos.length) renderTodoList(globalTodos)
 
 
+setInterval(checkDeadlines(globalTodos), 600); 
+
+
 const modal = document.querySelector('.modal');
 const closeModalButton = document.querySelector('.close');
 const editForm = document.querySelector(".edit__form");
 const editNameInput = document.getElementById("editName");
 const editDescriptionInput = document.getElementById("editDescription");
 const editDeadlineInput = document.getElementById("editDeadline");
+
+
 
 const openModal = (modal) => {
     document.body.style.overflow = "hidden";
@@ -101,14 +107,14 @@ function renderTodoList(todos) {
 
         const newTodoDeadline = document.createElement("div");
         newTodoDeadline.classList.add('todo__deadline')
-        newTodoDeadline.textContent = formatTime(todo.time)
+        newTodoDeadline.textContent = `deadline: ${formatTime(todo.time)}`
         todoDiv.appendChild(newTodoDeadline);
 
         const buttonsArea = document.createElement('div');
         buttonsArea.classList.add('buttons__area')
 
         const editButton = document.createElement("button");
-        editButton.textContent = "Edit";
+        editButton.textContent = "edit";
         editButton.classList.add("edit-btn");
         buttonsArea.appendChild(editButton);
 
