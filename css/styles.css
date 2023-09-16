@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
 
 * {
     margin: 0;
@@ -14,12 +11,19 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-size: 400%; 
     background-repeat: no-repeat;
     color: white;
 }
 
+input, select, button {
+    font-family: inherit;
+}
+
+input[type=datetime-local] {
+    cursor: pointer;
+}
 
 body.classic {
     background-image: linear-gradient(120deg, rgb(65, 59, 59), rgb(71, 71, 242), rgb(237, 82, 159));
@@ -293,7 +297,7 @@ select {
     cursor: pointer;
     width: 100%;
     background-color: white;
-    padding: 20px;
+    padding: 15px;
 }
 
 .select {
